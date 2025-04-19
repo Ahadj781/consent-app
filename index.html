@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consentement</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Formulaire de consentement</h1>
+    
+    <label for="person1">Nom de la première personne :</label>
+    <input type="text" id="person1" required>
+
+    <label for="person2">Nom de la deuxième personne :</label>
+    <input type="text" id="person2" required>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="consent" required>
+      <label for="consent">Nous confirmons notre consentement mutuel</label>
+    </div>
+
+    <button onclick="generatePDF()">Valider et générer le PDF</button>
+  </div>
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
